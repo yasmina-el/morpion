@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Yeseva One,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    font-family: monospace;
+    
+   }
+
+h1{
+    text-align:center;
+    font-size:xxx-large;
+    
+}
+
+.backgroundPlay{
+    position:absolute;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-size:cover;
+    background-position: center;
+    background-image: url(../pictures/pexels-michael-block-3225517.jpg);
+
+    
+}
+
+
+
+.board{
+    width:17em;
+    height:17em;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr;
+    background-color: rgba(255, 255, 255, 0.76);
+
+}
+
+.cell{
+    border:1px solid black;
+    text-align: center;
+    font-size: 60px
+}
+
+.winner{
+    color:white;
+    font-size: xx-large;
+    background-color: rgba(0, 0, 0, 0.541);
+    
+   
+}
+
+#gameEnd{
+    position: fixed;
+    display:none;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    width:100%;
+    height: 100%;
+    top:0;
+
+    background-image: url(../pictures/pexels-wendy-wei-1540406.jpg);
+    background-position: center;
+    background-size: cover;
+    
+    
+}
+
+#gameEnd input{
+    width: 170px;
+    align-self: center;
+   
+    font-size: medium;
+
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    border-radius: 5%;
+    background-size: 300% 100%;
+    
+    background-image: linear-gradient(
+      to right,
+      #29323c,
+      #485563,
+      #2b5876,
+      #4e4376
+    );
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+  
+#gameEnd input:hover {
+    background-image: linear-gradient(
+      to right,
+      #2b5876,
+      #4e4376
+      
+    );
+  }
+  
+  #gameEnd input:focus {
+    outline: none;
+  }
+  
+@media screen and (max-width:595px){
+    
+    
+    h1{
+        font-size:2em;
+    }
+
+    .winner{
+        font-size: large;
+    }
+}
